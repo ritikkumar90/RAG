@@ -1,0 +1,15 @@
+fastapi
+langchain
+langchain-community
+langgraph
+langchain_google_genai
+uvicorn
+pypdf
+requests
+charset_normalizer
+dotenv
+langchain-text-splitters
+langchain-core
+langchain-chroma 
+chromedb
+langchain_groq
