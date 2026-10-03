@@ -21,10 +21,3 @@ class EmbeddingModel(Embeddings):
     def embed_query(self, text: str)->List[List[float]]:
         return self.embed_documents([text])[0]
 
-
-# load_dotenv()
-
-# def doc_embed():
-#     # We just need to return the model itself. ChromaDB will use it to embed!
-#     embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
-#     return embeddings

@@ -1,12 +1,9 @@
 from langchain_chroma import Chroma
-from components.embedFunction import EmbeddingModel
-from dotenv import load_dotenv
-import os
+# from components.embedFunction import EmbeddingModel
+from langchain_huggingface import HuggingFaceEmbeddings
 
 
-load_dotenv()
-url = os.getenv("URL")
-embedding_model = EmbeddingModel(url)
+embedding=HuggingFaceEmbeddings(model="BAAI/bge-small-en-v1.5")
 def get_retriever(persist_directory="./chroma_db", search_kwargs=None):
     """
     Initializes and returns a retriever from the Chroma vector store.
@@ -16,7 +13,7 @@ def get_retriever(persist_directory="./chroma_db", search_kwargs=None):
         
     vectorstore = Chroma(
         persist_directory=persist_directory,
-        embedding_function=embedding_model
+        embedding_function=embedding
     )
     
     return vectorstore.as_retriever(search_kwargs=search_kwargs)

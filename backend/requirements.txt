@@ -13,3 +13,9 @@ langchain-core
 langchain-chroma 
 chromedb
 langchain_groq
+langchain_huggingface
+ollama
+pymysql 
+sqlalchemy
+pwdlib[argon2]
+python-jose[cryptography]

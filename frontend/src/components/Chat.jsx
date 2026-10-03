@@ -16,7 +16,7 @@ const Chat = () => {
     setInput("");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/ask", {
+      const response = await fetch("http://127.0.0.1:8000/user/ask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const Chat = () => {
       }
 
       const data = await response.json();
-      
+
       setMessages((prev) => [
         ...prev,
         {
